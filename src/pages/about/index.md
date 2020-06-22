@@ -1,19 +1,46 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About REWINDER
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### このサイトについて
+REWINDERは個人開発者による技術系ブログです
+フロントエンド・バックエンドなどに関わらず、様々な類のプログラミング・テクノロジー情報を共有するために開設しました
+本サイトはGatsby + Netlifyで構成しています
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### サイト管理者について
+aqtagawaと申します
+プログラムの世界に足を踏み入れてまだ日が浅いですが、日々様々な知識を吸収して勉強しています
+現在web系の企業にてフロントエンドの開発からバックエンド、AWSを利用したインフラの構築まで担当しています
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### ポートフォリオ
+#### 利用言語
+- java(android studio、spring boot)
+- swift（iOS）
+- python
+- javascript
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+####  AWS
+- 以下ツールを利用したインフラ構築経験あり
+  - EC2
+  - RDS
+  - Elastic Beanstalk
+  - Lambda
+  - CloudWatch
+  - Route53
+  - CodePipeline
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+#### デザイン
+- sketch（プロトタイプや画面遷移図作成）
+- AdobeXD
+- photoshop（アプリアイコンなどの作成）
+- illustlator（パンフレットの編集など）
+
+### そのた
+個人的な趣味としてテクノやハウスなどの音楽制作・DJをしています
+https://soundcloud.com/jabberwocky3376
+
+また、家業として陶芸をしております。食器や花瓶などの陶器がご入用でしたらぜひご連絡ください
+http://www16.plala.or.jp/k-sui/index.html/index.html
+
+その他、登山やキャンプなど、アウトドア関連もよく行っていますので、もしかしたらそのあたりの記事も追加するかもしれません
