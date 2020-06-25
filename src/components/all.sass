@@ -117,13 +117,19 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: rgba(145, 165, 191, 0.7);
+  background-color: rgba(145, 165, 191, 0.4);
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
+.featured-thumbnail
+  flex-basis: 50%;
   margin: 0 1.5em 0 0;
+.blog-list-item
+  padding-top: 100em;
+  border: 1px dashed;
+  transition: all .3s;
+.blog-list-item:hover
+  background-color: rgba(150, 168, 82,.2);
 
 
 @import "~bulma"
