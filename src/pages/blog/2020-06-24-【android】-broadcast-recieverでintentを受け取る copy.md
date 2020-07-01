@@ -1,19 +1,19 @@
 ---
 templateKey: blog-post
 title: 【Android】 Broadcast Recieverでintentを受け取る
-date: 2020-06-23T00:29:16.019Z
+date: 2020-06-24T00:29:16.019Z
 description: ---
 featuredpost: true
 featuredimage: /img/smartphone-image.jpg
 tags:
   - android
 ---
-# Broadcast Recieverとは？
+## Broadcast Recieverとは？
 ---
 - BroadcastReceiver（ブロードキャストレシーバー）とは、ブロードキャストしたインテントを受け取る仕組みのこと
 - OSのAndroidシステム側でブロードキャストされるイベント（スクリーンのON/OFFなど）以外でも、自分で作成したアプリでも独自のインテントを生成してブロードキャストできる
 
-# intentとは？
+## intentとは？
 ---
 - intentとは、アプリケーションの中の1つ1つの機能のこと。たとえばアプリケーション同士や、アプリケーションとウィジェット、アプリケーションとシステムを橋渡しする仕組みのこと
 - BroadcastRecieverを使わずとも、intentだけでも利用が可能で、例えば電話をかけたりカメラを起動することもできる
@@ -23,7 +23,7 @@ tags:
    - アプリのインストールを検知する
    - 振動を検知する　等
 
-# 使ってみよう
+## 使ってみよう
 ---
 アクティビティからサービスを起動　→　サービスでレシーバーを登録　という流れでやってみました
 
@@ -133,14 +133,14 @@ public class MyService extends Service {
 }
 ```
 
-# 解説
+## 解説
 ---
 - MyReceiverのonReceiveにて、intent.getAction()が登録したintentFilterのアクションと合致したらログを出す様に処理
 - MyActivityにボタンを設置。ボタンを押すとサービスを起動するという単純な構造
 - MyService内でReceiverの登録を行なっている。startInForegroundはForegroundService用でとりあえず実装（あまり気にしなくていいです）
 - サービスが起動している間に、スクリーンをOn/Offにしたらその度にログが出る
 
-# 備考
+## 備考
 ---
 - 最ライフログやヘルスケアのアプリをよく見るので、どんな風にデータを集計しているのか気になったところ、intentを使っているパターンが多い様に感じたので調査してみた
 - 今回紹介した以外にも、intentはものすごく沢山あるので、アプリによっては有用なものもある...かもしれない

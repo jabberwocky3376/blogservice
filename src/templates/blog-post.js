@@ -25,7 +25,7 @@ export const BlogPostTemplate = ({
             <p style={{ textAlign:`center`, fontStyle: `italic`}}>
               -&nbsp;&nbsp;{date}&nbsp;&nbsp;-
             </p>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light" style={{ color: `#333` }}>
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light" style={{ color: `#333` , textAlign: "center"}}>
               {title}
             </h1>
             {tags && tags.length ? (
