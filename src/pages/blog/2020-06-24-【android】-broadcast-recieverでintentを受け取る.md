@@ -7,6 +7,8 @@ featuredpost: true
 featuredimage: /img/smartphone-image.jpg
 tags:
   - android
+  - aaa
+  - eee
 ---
 # Broadcast Recieverとは？
 ---

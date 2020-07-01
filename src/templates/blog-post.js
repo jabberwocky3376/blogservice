@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { bool } from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
@@ -9,7 +9,7 @@ import Content, { HTMLContent } from '../components/Content'
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
+  date,
   tags,
   title,
   helmet,
@@ -17,30 +17,29 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section" style={{ margin: `5rem 7rem 0 7rem` }}>
       {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <p style={{ textAlign:`center`, fontStyle: `italic`}}>
+              -&nbsp;&nbsp;{date}&nbsp;&nbsp;-
+            </p>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light" style={{ color: `#333` }}>
               {title}
             </h1>
-            <p>{description}</p>
-            <div style={{ color: `#333` }}>
-              <PostContent content={content} />
-            </div>
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+              <div style={{ margin: `4rem 0 4rem 0` , textAlign:`center`}} >#
                   {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+                    <div key={tag + `tag`}  style={{ display: `inline`}}>
+                      &nbsp;&nbsp;<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </div>
                   ))}
-                </ul>
               </div>
             ) : null}
+            <div style={{lineHeight: `1.9`, letterSpacing: `0.06em` ,color: `#333`, marginBottom: `5rem`}}>
+              <PostContent content={content} />
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +50,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  date: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -64,7 +63,7 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        date={post.frontmatter.date}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -95,7 +94,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/MM/DD")
         title
         description
         tags
