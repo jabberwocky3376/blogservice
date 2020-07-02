@@ -8,6 +8,11 @@ featuredimage: /img/smartphone-image.jpg
 tags:
   - android
 ---
+
+今回はAndroidについての記事です。\
+直近でライフログアプリの作成を行いました。その際に勉強になったintentやBroadcast Receiverについて解説します。\
+今回紹介した以外にも、intentはものすごく沢山あるので、アプリによっては有用なものもある...かもしれません。
+
 ## Broadcast Recieverとは？
 ---
 - BroadcastReceiver（ブロードキャストレシーバー）とは、ブロードキャストしたインテントを受け取る仕組みのこと
@@ -139,8 +144,3 @@ public class MyService extends Service {
 - MyActivityにボタンを設置。ボタンを押すとサービスを起動するという単純な構造
 - MyService内でReceiverの登録を行なっている。startInForegroundはForegroundService用でとりあえず実装（あまり気にしなくていいです）
 - サービスが起動している間に、スクリーンをOn/Offにしたらその度にログが出る
-
-## 備考
----
-- 最ライフログやヘルスケアのアプリをよく見るので、どんな風にデータを集計しているのか気になったところ、intentを使っているパターンが多い様に感じたので調査してみた
-- 今回紹介した以外にも、intentはものすごく沢山あるので、アプリによっては有用なものもある...かもしれない
