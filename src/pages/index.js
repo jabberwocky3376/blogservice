@@ -24,9 +24,7 @@ export default class BlogIndexPage extends React.Component {
             Latest Stories
           </h1>
         </div>
-        <section className="section" style={{
-            margin: `0 10em 0 10em`
-          }}>
+        <section className="section">
           <div className="container">
             <div className="content">
               <BlogRoll />
