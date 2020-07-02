@@ -4,7 +4,7 @@ title: 【Android】 Broadcast Recieverでintentを受け取る
 date: 2020-06-24T00:29:16.019Z
 description: ---
 featuredpost: true
-featuredimage: /img/smartphone-image.jpg
+featuredimage: /img/android_eyecatch.jpg
 tags:
   - android
 ---

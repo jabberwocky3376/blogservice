@@ -4,7 +4,7 @@ title: Gatsby + Netlify でブログを開設しました
 date: 2020-06-23T00:29:16.019Z
 description: ---
 featuredpost: true
-featuredimage: /img/smartphone-image.jpg
+featuredimage: /img/gatsby_eyecatch.jpg
 tags:
   - React
   - Gatsby

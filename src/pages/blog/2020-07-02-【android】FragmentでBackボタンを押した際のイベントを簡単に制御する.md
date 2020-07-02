@@ -1,22 +1,22 @@
 ---
 templateKey: blog-post
-title: 【Android】FragmentでBackボタンを押した際のイベントを簡単に制御する
-date: 2020-07-02T11:09:16.019Z
+title: 【android】FragmentでBackボタンを押した際のイベントを簡単に制御する
+date: 2020-07-02T00:29:16.019Z
 description: ---
 featuredpost: true
 featuredimage: /img/android_eyecatch.jpg
 tags:
   - android
-  - java
 ---
+
 
 とあるアプリを作成しているときにバックボタンを無効化する処理を入れたかったので、その備忘録です。
 
 # 概要
 - ActivityだったらOnBackPressedを以下のようにオーバーライドするだけでOKだが、fragmentではそうもいかない
 
-```MyActivity.java
-@Override
+```java:title=MyActivity.java
+    @Override
     public void onBackPressed() {
       // バックボタンが押された際の処理を入れる
     }
@@ -28,7 +28,7 @@ tags:
 
 # 方法
 
-```MyFragment.java
+```java:title=MyFragment.java
 public class MyFragment extends Fragment {
     private OnBackPressedCallback mBackButtonCallback;
 
