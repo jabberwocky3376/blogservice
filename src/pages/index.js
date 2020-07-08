@@ -8,7 +8,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div
-          className="full-width-image-container margin-top-0"
+          className="full-width-image-container margin-top-2"
           style={{
             backgroundImage: `url('/img/blog-index.jpg')`,
           }}
@@ -21,7 +21,7 @@ export default class BlogIndexPage extends React.Component {
               padding: '2.5rem',
             }}
           >
-            Latest Stories
+            Rewinder Development Blog
           </h1>
         </div>
         <section className="section">
